@@ -1,0 +1,25 @@
+Math
+
+Find the sum of numbers between 1 and 20 (1 and 20 included):
+210 (Answer)
+21
+121
+None
+
+What is 1/4 + 1/5 + 1/6 = ?
+3/15
+37/60 (Answer)
+3/120
+None
+
+a = 20/37, b = 11/37, c = 30/37 put the numbers in increasing order:
+a < c < b
+b < c < a
+b < a < c (Answer)
+None
+
+What is 1+2+3 = ?
+3
+4
+5
+None (Answer)
