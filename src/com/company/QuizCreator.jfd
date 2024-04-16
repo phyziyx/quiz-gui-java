@@ -1,0 +1,198 @@
+JFDML JFormDesigner: "8.0.1.0.199" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0, 0:1.0, 0:1.0, 0, 0"
+			"$rowSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+			"$hGap": 5
+			"$vGap": 5
+			"$alignLeft": true
+			"$alignTop": true
+		} ) {
+			name: "mainPanel"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "quizCreatorLabel"
+				"text": "Quiz Creator"
+				"horizontalAlignment": 0
+				"font": new java.awt.Font( "Segoe UI", 1, 16 )
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"hAlign": 5
+				"vAlign": 0
+				"gridwidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "topicNameLabel"
+				"text": "Topic Name"
+				"labelFor": &FormReference0 new FormReference( "topicNameField" )
+				"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 2
+				"hAlign": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "topicNameField"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 3
+				"gridy": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "scoreVisibilityLabel"
+				"text": "Score Visibility"
+				"labelFor": #FormReference0
+				"font": #SwingDerivedFont0
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 3
+				"hAlign": 2
+				"gridx": 2
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "scoreVisibilityCheckbox"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 3
+				"gridy": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "passingPercentageLabel"
+				"text": "Passing Percentage"
+				"labelFor": #FormReference0
+				"font": #SwingDerivedFont0
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 4
+				"hAlign": 2
+				"gridx": 2
+			} )
+			add( new FormComponent( "javax.swing.JSlider" ) {
+				name: "passingPercentageSlider"
+				"value": 0
+				"paintLabels": true
+				"toolTipText": "% of marks Student must obtain to pass the quiz"
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "sliderChange", false ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 3
+				"gridy": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "passingSliderText"
+				"text": "0%"
+				"labelFor": &FormReference1 new FormReference( "passingPercentageSlider" )
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "passingSliderText"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 4
+				"gridy": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "shuffleQuestionsLabel"
+				"text": "Shuffle Questions"
+				"labelFor": #FormReference0
+				"font": #SwingDerivedFont0
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 5
+				"hAlign": 2
+				"gridx": 2
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "shuffleQuestionsCheckbox"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 5
+				"gridx": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "minuteLabel"
+				"text": "Time (Minutes)"
+				"labelFor": #FormReference0
+				"font": #SwingDerivedFont0
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 6
+				"hAlign": 2
+				"gridx": 2
+			} )
+			add( new FormComponent( "javax.swing.JSlider" ) {
+				name: "minuteSlider"
+				"value": 0
+				"maximum": 10
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "minuteSliderStateChange", false ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 3
+				"gridy": 6
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "minuteSliderText"
+				"text": "0"
+				"labelFor": #FormReference1
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "minuteSliderText"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 6
+				"gridx": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "questionAddedLabel"
+				"text": "Questions Added: 0"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 7
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "addButton"
+				"text": "Add Question"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addQuestion", false ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 3
+				"gridy": 7
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "createButton"
+				"text": "Create"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "createQuiz", false ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 8
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "backButton"
+				"text": "Back"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "backFromCreator", false ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 3
+				"gridy": 8
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 60 )
+			"size": new java.awt.Dimension( 315, 150 )
+		} )
+	}
+}

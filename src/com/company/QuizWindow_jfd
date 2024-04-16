@@ -1,0 +1,218 @@
+JFDML JFormDesigner: "8.0.1.0.199" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+			"autoSize": false
+		} ) {
+			name: "frame1"
+			"minimumSize": new java.awt.Dimension( 0, 450 )
+			"maximizedBounds": new java.awt.Rectangle( 0, 0, 600, 800 )
+			"title": "Quiz Management System - Quiz View"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "mainPanel"
+				"border": new javax.swing.border.TitledBorder( "" )
+				add( new FormContainer( "javax.swing.JSplitPane", new FormLayoutManager( class javax.swing.JSplitPane ) ) {
+					name: "splitPane1"
+					"focusable": false
+					"opaque": false
+					"enabled": false
+					"maximumSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"minimumSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"preferredSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"componentOrientation": sfield java.awt.ComponentOrientation LEFT_TO_RIGHT
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0"
+						"$rowSpecs": "0, 0, 0, 0, 0"
+					} ) {
+						name: "sidePanel"
+						"alignmentY": 1.0f
+						"border": new javax.swing.border.TitledBorder( "" )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "exitButton"
+							"text": "Exit"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "quizExit", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 4
+							"vAlign": 0
+							"weightx": 1.0
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "usernameLabel"
+							"text": "Username"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"hAlign": 0
+							"vAlign": 5
+							"weightx": 1.0
+						} )
+						add( new FormComponent( "javax.swing.JSeparator" ) {
+							name: "separator1"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+							"weightx": 1.0
+							"weighty": 1.0
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "quizInfoLabel"
+							"text": "00:00 s"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 2
+							"hAlign": 0
+							"vAlign": 0
+							"weightx": 1.0
+						} )
+						add( new FormComponent( "javax.swing.JSeparator" ) {
+							name: "separator2"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 3
+							"weightx": 1.0
+							"weighty": 1.0
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "left"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "left:0, left:500, right:0"
+						"$rowSpecs": "center:200, 0, 0:1.0, 0:1.0, 0:1.0, 0:1.0, 0, 0"
+						"$alignTop": true
+						"$alignLeft": true
+					} ) {
+						name: "viewPanel"
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"preferredSize": new java.awt.Dimension( 60, 200 )
+						"focusable": false
+						"minimumSize": new java.awt.Dimension( 60, 200 )
+						"maximumSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "questionLabel"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 131073, 16, true )
+							"text": "<html><center>a very long question to test whether it will go out of the window or not because it should not my dear friend</center></html>"
+							"maximumSize": new java.awt.Dimension( 300, 22 )
+							"minimumSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"preferredSize": new java.awt.Dimension( 500, 44 )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+							"hAlign": 5
+							"vAlign": 0
+						} )
+						add( new FormComponent( "javax.swing.JSeparator" ) {
+							name: "separator3"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "answerButtons"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 14, true )
+							"text": "answer1Button"
+							"$buttonGroup": new FormReference( "answerGroup" )
+							auxiliary() {
+								"JavaCodeGenerator.customCreateCode": "answerButtons[0]"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 2
+							"vAlign": 0
+							"hAlign": 0
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "answer2Button"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 14, true )
+							"text": "answer2Button"
+							"$buttonGroup": new FormReference( "answerGroup" )
+							auxiliary() {
+								"JavaCodeGenerator.customCreate": true
+								"JavaCodeGenerator.customCreateCode": "answerButtons[1]"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 3
+							"hAlign": 0
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "answer3Button"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 14, true )
+							"text": "answer3Button"
+							"$buttonGroup": new FormReference( "answerGroup" )
+							auxiliary() {
+								"JavaCodeGenerator.customCreate": true
+								"JavaCodeGenerator.customCreateCode": "answerButtons[2]"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 4
+							"hAlign": 0
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "answer4Button"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 14, true )
+							"text": "answer4Button"
+							"$buttonGroup": new FormReference( "answerGroup" )
+							auxiliary() {
+								"JavaCodeGenerator.customCreate": true
+								"JavaCodeGenerator.customCreateCode": "answerButtons[3]"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 5
+							"hAlign": 0
+							"gridx": 1
+						} )
+						add( new FormComponent( "com.jformdesigner.designer.wrapper.VSpacer" ) {
+							name: "vSpacer1"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 6
+							"gridx": 1
+							"hAlign": 0
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "nextSubmitButton"
+							"text": "Next/Submit"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "quizNext", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 7
+							"hAlign": 0
+							"gridx": 1
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "right"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 1012
+				"height": 402
+				"x": 0
+				"y": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "text"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 170
+				"y": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 635, 435 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "answerGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 440 )
+		} )
+	}
+}

@@ -6,7 +6,7 @@ This was once a CLI based Quiz game I wrote for my exam assessing the OOP concep
 
 - JetBrains IntelliJ
 - Java
-- JDBC (and MySQL)
+- JDBC (and MySQL) (version: 8.0.31)
 
 ## ERD
 
